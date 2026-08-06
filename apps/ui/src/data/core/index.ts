@@ -20,6 +20,7 @@ export type {
 	SelectedSiteFolder,
 	SessionEntry,
 	SiteDetails,
+	SiteStorageUsage,
 	SkillStatus,
 	Snapshot,
 	SnapshotUsage,
