@@ -34,7 +34,8 @@ import { useSidebarCollapsed } from '@/hooks/use-sidebar-collapsed';
 import { useSiteManagementActions } from '@/hooks/use-site-management-actions';
 import { useTrafficLightSpace } from '@/hooks/use-traffic-light-space';
 import { AboutSection } from './about-section';
-import { OverviewCard } from './overview-card';
+import { ConnectionsSection } from './connections-section';
+import { CardSectionDivider, OverviewCard } from './overview-card';
 import styles from './style.module.css';
 import type { SiteSettingsTabId } from '@/components/site-settings-view';
 import type { SiteDetails } from '@/data/core';
@@ -269,6 +270,8 @@ function SiteOverviewBody( {
 									<h2 className={ styles.columnHeading }>{ __( 'About' ) }</h2>
 									<OverviewCard>
 										<AboutSection site={ site } wpVersion={ wpVersion } />
+										<CardSectionDivider />
+										<ConnectionsSection site={ site } busy={ busy } />
 									</OverviewCard>
 								</div>
 								<div className={ styles.actionsColumn }>
