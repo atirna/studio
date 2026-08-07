@@ -36,6 +36,7 @@ import { useTrafficLightSpace } from '@/hooks/use-traffic-light-space';
 import { AboutSection } from './about-section';
 import { ConnectionsSection } from './connections-section';
 import { CardSectionDivider, OverviewCard } from './overview-card';
+import { PreviewSitesSection } from './preview-sites-section';
 import styles from './style.module.css';
 import type { SiteSettingsTabId } from '@/components/site-settings-view';
 import type { SiteDetails } from '@/data/core';
@@ -272,6 +273,8 @@ function SiteOverviewBody( {
 										<AboutSection site={ site } wpVersion={ wpVersion } />
 										<CardSectionDivider />
 										<ConnectionsSection site={ site } busy={ busy } />
+										<CardSectionDivider />
+										<PreviewSitesSection site={ site } />
 									</OverviewCard>
 								</div>
 								<div className={ styles.actionsColumn }>
